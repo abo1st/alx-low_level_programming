@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 /**
  * main - A program that prints size of various types on the computer it is compiled and run on
- * 
+ *
  * Return: Always 0 (Success)
  */
-int main(void)
+	int main(void)
 {
 	int a;
 	long int b;
