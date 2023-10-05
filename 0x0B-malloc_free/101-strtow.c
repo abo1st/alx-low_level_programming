@@ -1,4 +1,4 @@
-#include "mainn.h"
+#include "main.h"
 #include <stdlib.h>
 
 int word_len(char *str);
@@ -6,11 +6,11 @@ int count_words(char *str);
 char **strtow(char *str);
 
 /**
- * word_len - This ocates the index marking the end of the
+ * word_len - This locates the index marking the end of the
  *            first word contained within a string.
- * @str: This is the string to be searched.
- * Return: Returns index marking the end of the initial word pointed to by str.
-*/
+ * @str: The string to be searched.
+ * Return: The index marking the end of the initial word pointed to by str.
+ */
 
 int word_len(char *str)
 {
@@ -26,12 +26,11 @@ int word_len(char *str)
 }
 
 /**
- * count_words - This counts the number of words contained within a string.
- * @str: This is the  string to be searched.
+ * count_words - Counts the number of words contained within a string.
+ * @str: The string to be searched.
  *
- * Return: This is the  number of words contained within str.
+ * Return: The number of words contained within str.
  */
-
 int count_words(char *str)
 {
 	int index = 0, words = 0, len = 0;
@@ -52,12 +51,12 @@ int count_words(char *str)
 }
 
 /**
- * strtow - Splits a string into words.
+ * strtow - Thos splits a string into words.
  * @str: The string to be split.
- *
  * Return: If str = NULL, str = "", or the function fails - NULL.
  *         Otherwise - a pointer to an array of strings (words).
  */
+
 char **strtow(char *str)
 {
 	char **strings;
