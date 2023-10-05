@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-  * argstostr - This converts the parameters passed to the program to string
+  * argstostr - Converts the parameters passed to the program to string
   * @ac: the argument count
   * @av: the argument vector
   *
