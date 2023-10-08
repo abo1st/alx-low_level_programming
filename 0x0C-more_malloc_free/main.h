@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define min(x, y) (((x) < (y)) ? (x) : (y))
+
 int len(char *str);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
