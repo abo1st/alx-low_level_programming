@@ -11,13 +11,9 @@
 	{
 		int i = 0;
 		char *str, *sep = "";
-
-
 		va_list list;
 
-
 		va_start(list, format);
-
 
 		if (format)
 		{
@@ -36,8 +32,8 @@
 						break;
 					case 's':
 						str = va_arg(list, char *);
-						if (!str)
-							str = "(nil)";
+					if (!str)
+						str = "(nil)";
 						printf("%s%s", sep, str);
 						break;
 					default:
@@ -48,8 +44,6 @@
 				i++;
 			}
 		}
-
-
 		printf("\n");
 		va_end(list);
 	}
