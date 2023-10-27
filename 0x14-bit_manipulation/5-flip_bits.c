@@ -9,17 +9,46 @@
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
+
 {
-	int z, cb = 0;
-	unsigned long int c;
-	unsigned long int exc = n ^ m;
+	unsigned long int p, q, r, s, t;
 
-	for (z = 63; z >= 0; z--)
+	q = p = r = 0;
+	t = n;
+	s = m;
+	while (n > 0)
 	{
-		c = exc >> a;
-		if (c & 1)
-			cb++;
+		n = n >> 1;
+		q++;
 	}
-
-	return (cb);
+	while (m > 0)
+	{
+		m = m >> 1;
+		p++;
+	}
+	m = s;
+	n = t;
+	if (p > q)
+	{
+		while (p > 0)
+		{
+			if ((m & 1) != (n & 1))
+				r += 1;
+			m = m >> 1;
+			n = n >> 1;
+			p--;
+		}
+	}
+	else
+	{
+		while (q > 0)
+		{
+			if ((m & 1) != (n & 1))
+				r += 1;
+			m = m >> 1;
+			n = n >> 1;
+			q--;
+		}
+	}
+	return (r);
 }
