@@ -19,7 +19,7 @@ unsigned long int _pow(unsigned int base, unsigned int power)
 }
 
 /**
- * print_binary -This prints the  number in binary notation.
+ * print_binary - This prints the  number in binary notation.
  * @n: This is the number to printed.
  * Return: void.
  */
@@ -34,7 +34,7 @@ void print_binary(unsigned long int n)
 	d = _pow(2, sizeof(unsigned long int) * 8 - 1);
 	while (d != 0)
 	{
-		check = n & d;
+		c = n & d;
 		if (c == d)
 		{
 			f = 1;
