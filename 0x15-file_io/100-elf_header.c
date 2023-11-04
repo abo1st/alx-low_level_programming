@@ -18,21 +18,21 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
 /**
- * check_elf - This checks if a file is an ELF file or not.
+ * check_elf - This checks if the file is an ELF file or not.
  * @e_ident: This is a  pointer to an array containing the ELF magic numbers.
  * Description: If the specific file is not an ELF file - exit code 98.
  */
 
 void check_elf(unsigned char *e_ident)
 {
-	int iz:
+	int iz;
 
 	for (iz = 0; iz < 4; iz++)
 	{
 		if (e_ident[iz] != 127 &&
-		    e_ident[iz] != 'E' &&
-		    e_ident[iz] != 'L' &&
-		    e_ident[iz] != 'F')
+			e_ident[iz] != 'E' &&
+			e_ident[iz] != 'L' &&
+			e_ident[iz] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
