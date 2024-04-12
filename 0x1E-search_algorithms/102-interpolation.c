@@ -20,9 +20,9 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	for (lz = 0, rz = size - 1; rz >= l;)
+	for (lz = 0, rz = size - 1; rz >= lz;)
 	{
-		iz = lz + (((double)(rz - l) / (array[rz] - array[lz])) * (value - array[lz]));
+		iz = lz + (((double)(rz - lz) / (array[rz] - array[lz])) * (value - array[lz]));
 		if (iz < size)
 			printf("Value checked array[%ld] = [%d]\n", iz, array[iz]);
 		else
