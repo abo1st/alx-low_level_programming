@@ -15,7 +15,7 @@
   */
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t i, l, r;
+	size_t iz, lz, rz;
 
 	if (array == NULL)
 		return (-1);
@@ -33,7 +33,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 		if (array[iz] == value)
 			return (iz);
-		if (array[i] > value)
+		if (array[iz] > value)
 			rz = iz - 1;
 		else
 			lz = iz + 1;
